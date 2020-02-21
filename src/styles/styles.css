@@ -1,0 +1,9 @@
+.container {
+    padding-top: 2rem;
+    max-width: 400px;
+    margin: 0 auto ;
+}
+
+h2 {
+    text-align: center;
+}

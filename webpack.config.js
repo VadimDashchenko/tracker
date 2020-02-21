@@ -1,11 +1,13 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 
 module.exports = {
     // entry: "./src/index.js",
+    context: path.resolve(__dirname, "src"),
     entry: {
-        main:'./src/index.js',
-        analytics: './src/analytics.js'
+        main:'./index.js',
+        analytics: './analytics.js'
     },
     mode: "development",
     output: {
@@ -14,7 +16,17 @@ module.exports = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: "Tracker"
-        })
-    ]
+            title: "Tracker",
+            template: "./index.html"
+        }),
+        new CleanWebpackPlugin()
+    ],
+    module: {
+        rules: [
+            {
+                test: /\.css$/,
+                use:["style-loader", 'css-loader']
+            }
+        ]
+    }
 };

@@ -1,1 +1,1 @@
-console.log('Analytics.js');
+console.log('Change file cash');

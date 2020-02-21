@@ -1,4 +1,5 @@
-console.log('index.js file');
+import './styles/styles.css';
+import json from './assets/json';
 
 let newString = '';
 
