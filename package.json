@@ -2,35 +2,41 @@
   "name": "tracker",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "private": true,
+  "browserslist": "> 0.25%, not dead",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "cross-env NODE_ENV=developer webpack --mode-developer",
-    "build": "cross-env NODE_ENV=production webpack --mode-production"
+    "dev": "cross-env NODE_ENV=development webpack --mode development",
+    "build": "cross-env NODE_ENV=production webpack --mode production",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --mode development --open"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/VadimDashchenko/tracker.git"
+    "url": "https://github.com/VadimDashchenko/tracker.git"
   },
   "author": "VadimDashchenko <dashchenko.vad.92@gmail.com>",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/VadimDashchenko/tracker/issues"
-  },
-  "homepage": "https://github.com/VadimDashchenko/tracker#readme",
   "devDependencies": {
     "@babel/core": "^7.8.4",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/polyfill": "^7.8.3",
     "@babel/preset-env": "^7.8.4",
     "@babel/preset-react": "^7.8.3",
+    "babel-eslint": "^10.0.3",
     "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
     "cross-env": "^7.0.0",
     "css-loader": "^3.4.2",
+    "eslint": "^6.8.0",
+    "eslint-loader": "^3.0.3",
     "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
     "sass-loader": "^8.0.2",
+    "terser-webpack-plugin": "^2.3.5",
     "webpack": "^4.41.6",
-    "webpack-cli": "^3.3.11"
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
     "react": "^16.12.0",
