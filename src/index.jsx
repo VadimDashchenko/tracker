@@ -1,5 +1,7 @@
 import React from 'react';
 import {render} from 'react-dom';
+import {Provider} from 'react-redux';
+import store from './redux/store';
 import './assets/styles/global.scss'
 
 const App = () => {
@@ -8,6 +10,11 @@ const App = () => {
         <h2>Webpack config is done!</h2>
     </div>
     )
-}
+};
 
-render(<App />, document.getElementById('root'));
+render(
+    <Provider store={store}>
+        <App />
+    </Provider>
+    , document.getElementById('root')
+);

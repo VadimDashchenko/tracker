@@ -39,7 +39,12 @@
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
+    "immutable": "^4.0.0-rc.12",
+    "prop-types": "^15.7.2",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5",
+    "reselect": "^4.0.0"
   }
 }
