@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import Input from '../../components/Input/Input';
 import Title from '../../components/Title/Title';
+import TrackerItem from "@/components/TrackerItem/TrackerItem";
 import '../../assets/styles/global.scss';
 
 class App extends Component {
@@ -19,9 +20,10 @@ class App extends Component {
     render() {
         const {nameTracker} = this.state;
         return (
-            <div className="App">
+            <div className="app">
                 <Title title="tracker" />
                 <Input handleChange={this.handleChangeInput} name={nameTracker} />
+                <TrackerItem />
             </div>
         )
     }

@@ -1,0 +1,38 @@
+.tracker {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px;
+  font-weight: bold;
+
+  &.active {
+    background: rgba(247, 219, 153, 0.11);
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    color: #17a91dcc;
+    font-size: 20px;
+    margin-right: 15px;
+
+    &-name {
+
+    }
+
+    &-time {
+
+    }
+  }
+
+  &__action {
+    display: flex;
+    flex-direction: row;
+  }
+  .icon {
+    margin-left: 5px;
+  }
+
+}
