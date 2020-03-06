@@ -110,6 +110,10 @@ module.exports = {
                 use: loaders('sass-loader')
             },
             {
+                test: /\.(png|svg|jpg|jpeg|gif)$/,
+                use:[{loader: "file-loader"}]
+            },
+            {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: jsLoaders()
